@@ -29,21 +29,21 @@
 			z-index: 20;
 			
         }
-        .leftbar li,.leftbar i{
+        .leftbar li,.leftbar i,.tottop{
         	width: 36px;
         	height: 36px;
         	margin-bottom: 5px;
-        	background-color: skyblue;
+        	background-color: #ccc;
         	color: white;
         	font-size: 14px;
         	display: block;
         }
         .leftbar li:hover{
-        	background-color: #ccc;
-        }
-        .leftbar .active{
         	background-color: #ff0036;
         }
+        /* .leftbar .active{
+        	background-color: #ff0036;
+        } */
         .right_h{
 		width: 35px;
 		height: 100%;
@@ -146,14 +146,19 @@
 
 	}
 	.float_news,.lefft{
-		width: 0px;
+		
 		height: 30px;
 		/* display: none; */
-		background-color: #ff6900;
+		background-color: rgba(0, 0, 0, 0.5);
 		position: absolute;
-		right: 35px;
+		left:-120px;
 		top: 0;
-		transition: width 1s;
+        color: white;
+        display: none;
+        text-align: center;
+        line-height: 30px;
+        font-size: 14px;
+		/* transition: width 1s ease-in; */
 	}
 	.title_fl{
 		margin-top: 100px;
@@ -261,7 +266,8 @@
             width: 648px;
             height: 30px;
             margin-top: 8px;
-             float: left;
+            float: left;
+            margin-left: 60px;
 
         }
         .topbarContent span{
@@ -285,8 +291,9 @@
             background-color: white;
             width: 290px;
             height: 130px;
+            display: block;
             float: left;
-            margin-top: 30px; }
+            }
         .searchLeft{
             width: 491px;
             height: 36px;
@@ -340,11 +347,10 @@
         .bannerClass:hover{ cursor: pointer; background-color: #ff6700; }
         /* banner特效结束 */
         .bannerTitle{
-            overflow: hidden;
-        	position: relative;
-            width: 1190px;
+            width: 1230px;
             height: 38px;
-            margin: 0 auto; }
+            margin: 0 auto;
+            overflow: hidden; }
         .bannerClass
         { width: 190px;
             height: 38px;
@@ -436,7 +442,7 @@
             background-color:#ff6700;
         }
         .carousel .active{
-            z-index: 55;
+            z-index: 56;
             background-color: blue;
         }
         .banner_lunbo .active{
@@ -446,9 +452,10 @@
             width: 250px;
             height: 20px;
             position: absolute;
-            left: 400px;
+            left: 50%;
             bottom: 50px;
-            z-index: 100;
+            z-index: 150;
+            margin-left: -125px;
         }
         .carousel li{
             width: 25px;
@@ -461,9 +468,16 @@
         .banner_zong{
             width:100%;
             height: 500px;
-            margin: 0 auto ;
             position: relative;
             overflow: hidden;
+            border-top: 1px solid #ff0036;
+        }
+        .bannerChange{
+            width: 100%;
+            height: 500px;
+            position: absolute;
+            top: 0;
+            left: 0
         }
         .banner{
             width: 1230px;
@@ -488,6 +502,10 @@
             left: 0;
 
         }
+        .banner_lunbo li img{
+            width: 100%;
+            height: 500px;
+        }
 		.banner_lunbo li p,.banner_lunbo li i{
 			display: block;
 			width: 500px;
@@ -509,7 +527,7 @@
             height: 500px;
             background-color: black;/* 透明度 */
             position: absolute;
-            left: 20px;
+            left: 0;
             top: 0px;
             color: white;
             opacity: 1;
@@ -532,7 +550,7 @@
             margin-top: 5px;
             position: absolute;
             z-index: 4;
-            right: 175px;
+            right: 20px;
             top: 250px;
             z-index: 77;
 
@@ -544,27 +562,27 @@
             margin-top: 5px;
             position: absolute;
             top:5px;
-            right: 175px;
+            right: 20px;
             z-index: 77;
         }
         .banner-up img,.banner-down img{
             width: 100%;
             height: 100%;
             position: absolute;
-            right: 0;
+             right: 0;
             left: 0;
             margin: auto;
             bottom: 5px;
             background-color: white;
         }
         .banner_nav li{
-            width: 200px;
+            width: 190px;
             height: 31.2px;
             /* background-color: red; */
             line-height: 31.2px;
             font-size: 14px;
             color: white;
-            margin: 0px 10px;
+           
         }
 
         .banner_nav p{
@@ -578,7 +596,7 @@
 
             color: #b0b0b0;
             float: left;
-            margin: 0 5px;
+           /*  margin: 0 5px; */
         }
         .banner_nav i{
             color: #b0b0b0;
@@ -695,24 +713,45 @@
             left:190px;
             top:0;
             /*overflow: hidden;*/
-            background-color: blue;
+            background-color: white;
             display: none;
             z-index: 11;
-            text-align: center;
-            line-height: 500px;
+           
             font-size: 50px;
             color: white;
+        }
+        .carRight i{
+            width: 100px;
+            height: 60px;
+            display: block;
+            font-size: 18px;
+            color: black;
+            float: left;
+
+
+        }
+        .know{
+            width: 852px;
+            display: block;
+            overflow: hidden;
+        }
+        .carRight span{
+            font-size: 14px;
+            color: #b0b0b0;
+            float: left;
+            margin: 0 10px;
         }
         /* banner结束 */
   /* 春夏新风尚  */
   .spring{
-  	width: 1230px;
+  	width: 100%;
   	height: 358.8px;
-  	margin: 20px auto;
+  
   }
   .springUp{
-  	width: 100%;
+  	width: 1230px;
   	height: 90px;
+    margin: 0 auto;
   	text-align: center;
   	line-height: 90px;
   }
@@ -723,12 +762,15 @@
   .springDown{
   	width:1230px;
   	height: 268px;
+    margin: 0 auto;
 
   }
 .springDown img{
 	width: 238px;
 	height: 268px;
 	margin-right: 5px;
+    display: block;
+    float: left;
 }
 .springDown .removeRight{
 	margin-right: 0px;
@@ -811,18 +853,20 @@ display: block;
 	
 }
 .conLogo li img{
-	width: 121px;
-	height: 107px;
-	float: left;
-	display: block;
-}
-.conLogo li img{
-	border-right: 1px solid #b0b0b0;
-	border-bottom: 1px solid #b0b0b0;
+	width: 82%;
+    height: 50px;
+    display: block;
+    margin: 25px auto;
 }
 .conLogo  li{
+    width: 121px;
+    height: 107px;
 	position: relative;
 	float: left;
+    display: block;
+    border-right: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+    background-color: white;
 }
 .change{
 	width: 122px;
@@ -833,6 +877,11 @@ display: block;
 	font-weight: 600;
 	color: #b0b0b0;
 	padding-top: 30px;
+    float: left;
+}
+.change:hover{
+    background-color: #ff0036;
+    color: white;
 }
 .change p{
 	font-family: iconfont;
@@ -879,6 +928,7 @@ font-size: 16px;
 .contentOneUp{
 height: 40px;
 width: 1230px;
+
 }
 .contentOneUp-title{
 	
@@ -896,6 +946,8 @@ width: 1230px;
 .contentOneUp img{
 	width: 214px;
 	height: 25px;
+    display: block;
+    float: left;
 }
 .contentOneDown{
 	width: 100%;
@@ -955,6 +1007,9 @@ float: left;
 	width: 100%;
 	height: 57px;
 }
+.CrightContentUp .active{
+    background-color: green;
+}
 .CrightContentUp li{
 	width: 50%;
 	height: 57px;
@@ -1002,6 +1057,9 @@ float: left;
 	width: 100%;
 	height: 220px;
 	position: relative;
+    top: 57px;
+    left: 0;
+
 }
 .CrightContentDown li{
 	width: 50%;
@@ -1032,6 +1090,7 @@ float: left;
 }
 .contentOneDown .CrightLeft{
 	margin-left: 0;
+
 }
 .Cright-R,.Cright-L{
 	width: 236px;
@@ -1056,6 +1115,7 @@ border: 1px solid  #ff0036;
 .Cright-L img{
 	width: 100%;
 	height: 100%;
+   
 }
 .Cright-R p,.loveBoxDown p{
 font-size: 14px;
